@@ -110,12 +110,34 @@ p {
     font-size: 2.5rem;
   }
 
+  .first-div {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+  }
+
   .heading {
-    display: none;
+      margin-top: 12px;
   }
 
   .bank-image {
-      margin-top: 30pt;
+      padding-bottom: 463px;
+      height: 243px;
+      margin-right: 373px;
+      margin-top: 24px;
+      padding-top: 99px;
+  }
+
+  .third-div {
+      padding-right: 0px;
+      width: 529px;
+      padding-left: 0px;
+      background: rgba(132, 60, 60, 0.69);
+      margin-left: 29rem;
+      margin-top: -300px;
+      padding-bottom: 1px;
+      margin-right: 0px;
+      margin-bottom: 8px;
   }
 }
 
