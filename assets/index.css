@@ -87,9 +87,9 @@ p {
 }
 
 .customer-report:active {
-    box-shadow: 4px 1px 0px 1px #121824;
--webkit-box-shadow: 4px 1px 0px 1px #121824;
--moz-box-shadow: 4px 1px 0px 1px #121824;
+  box-shadow: 4px 1px 0px 1px #121824;
+  -webkit-box-shadow: 4px 1px 0px 1px #121824;
+  -moz-box-shadow: 4px 1px 0px 1px #121824;
   transform: translateY(1px);
   transform: translateX(2px);
 }
@@ -111,33 +111,56 @@ p {
   }
 
   .first-div {
-      align-items: center;
-      justify-content: center;
-      display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   .heading {
-      margin-top: 12px;
+    margin-top: 12px;
+    display: none;
   }
 
   .bank-image {
-      padding-bottom: 463px;
-      height: 243px;
-      margin-right: 373px;
-      margin-top: 24px;
-      padding-top: 99px;
+    padding-bottom: 463px;
+    width: 100%;
+    height: 200px;
+    margin-right: 270px;
+    margin-top: 24px;
+    padding-top: 99px;
+    float: inline-end;
   }
 
   .third-div {
-      padding-right: 0px;
-      width: 529px;
-      padding-left: 0px;
-      background: rgba(132, 60, 60, 0.69);
-      margin-left: 29rem;
-      margin-top: -300px;
-      padding-bottom: 1px;
-      margin-right: 0px;
-      margin-bottom: 8px;
+    float: right;
+    padding-right: 0px;
+    width: 555px;
+    padding-left: 0px;
+    background: rgba(180, 60, 60, 0.76);
+    margin-top: -450px;
+    padding-bottom: 1px;
+    margin-right: 120px;
+    margin-bottom: 8px;
+    font-size: large;
+  }
+
+  .customer-report:active {
+    box-shadow: 4px 1px 0px 1px rgba(180, 60, 60, 0);
+    -webkit-box-shadow: 4px 1px 0px 1px rgba(180, 60, 60, 0);
+    -moz-box-shadow: 4px 1px 0px 1px rgba(180, 60, 60, 0);
+    transform: translateY(1px);
+    transform: translateX(2px);
+  }
+  .footer-text {
+    background: transparent;
+    position: absolute;
+    bottom: 7%;
+    right: -35pt;
+    color: rgb(211, 226, 240);
+    font-size: 12px;
+    margin-bottom: 0px;
+    float: inline-end;
+    font-family: "Open Sans", sans-serif;
+    transform: rotate(-90deg);
   }
 }
-
