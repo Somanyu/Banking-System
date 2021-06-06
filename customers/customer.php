@@ -65,7 +65,7 @@ $mysqli->close();
 			/* Table Styles */
 
 			.table-wrapper{
-				margin: 10px 70px 70px;
+				margin: 10px 70px 30px;
 				box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;				
 			}
 
@@ -81,39 +81,55 @@ $mysqli->close();
 			}
 
 			.fl-table td, .fl-table th {
-				text-align: center;
+				text-align: left;
 				padding: 10px;
 				font-family: "Open Sans", sans-serif;
 				font-size: 15px;
+				
 			}
 
 			.fl-table td {
 				border-right: 0px solid #f8f8f8;
 				font-size: 14px;
 				color: #fff;
+				padding-right: 50pt;
+				display: table-cell;
+				padding-left: 34px;
+			}
+
+			.data-row:hover {
+				background-color: rgb(59, 60, 61);
 			}
 
 			.fl-table thead th {
 				color: #ffffff;
 				background: #c84f4b;
+				text-align:center;
 			}
 
 
 			.fl-table thead th:nth-child(odd) {
 				color: #fff;
 				background: #c84f4b;
+				text-align: center;
 			}
 
 			.fl-table tr:nth-child(even) {
 				background: #F8F8F8;
 			}
 
-			.report-button {
+			/* .report-button {
 				margin-top: -20pt;
 				margin-bottom: 20pt;
 				display: flex;
 				justify-content: space-around;
-			}
+			} */
+
+			table .transfer {
+    left: 4%;
+    position: relative;
+}
+
 
 			/* Responsive */
 
@@ -185,7 +201,7 @@ $mysqli->close();
 
 <body>
 		<h2 class="customer-heading">Customer Transaction</h2>
-		<div class="report-button">
+		<!-- <div class="report-button">
         	<a href="#">
           		<button class="customer-report" type="button">
             		View Customer Report
@@ -196,15 +212,16 @@ $mysqli->close();
             		View Customer Report
           		</button>
         	</a>
-      	</div>
+      	</div> -->
 		<div class="table-wrapper">
 			<table class="fl-table">
 				<thead>
 					<tr>
 						<th>Identity No</th>
-						<th>First Name</th>
+						<th>Name</th>
 						<th>E-mail ID</th>
 						<th>Balance</th>
+						<th>Info</th>
 					</tr>
 				</thead>
 				<?php
@@ -212,11 +229,18 @@ $mysqli->close();
          			{
      			?>
 				<tbody>
-			    	<tr>
+			    	<tr class="data-row">
         				<td><?php echo $rows['Identity No'];?></td>
          				<td><?php echo $rows['First Name'];?></td>
          				<td><?php echo $rows['E-mail ID'];?></td>
          				<td>₹ <?php echo $rows['Balance'];?> /-</td>
+         				<td class="transfer">
+							<a href="./customers/exam.php">
+          						<button class="customer-report" type="button">
+            						Transfer
+          						</button>
+        					</a>
+						</td>
      				</tr>
 				</tbody>
 				<?php
