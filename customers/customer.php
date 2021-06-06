@@ -1,39 +1,12 @@
-<!-- PHP code to establish connection
-with the localserver -->
-<?php
+<?php include 'config.php';?>
 
-// Username is root
-$user = 'root';
-$password = '';
-
-// Database name is gfg
-$database = 'customers';
-
-// Server is localhost with
-// port number 3308
-$servername='localhost';
-$mysqli = new mysqli($servername, $user,
-				$password, $database);
-
-// Checking for connections
-if ($mysqli->connect_error) {
-	die('Connect Error (' .
-	$mysqli->connect_errno . ') '.
-	$mysqli->connect_error);
-}
-
-// SQL query to select data from database
-$sql = "SELECT * FROM customer_transc";
-$result = $mysqli->query($sql);
-$mysqli->close();
-?>
 <!-- HTML code to display data in tabular format -->
 <!DOCTYPE html>
 <html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Customer Transaction</title>
+		<title>Bank of America | Transaction</title>
 		<!-- CSS FOR STYLING THE PAGE -->
 		<!-- <link rel="stylesheet" href="./customers/assets/customer.css"> -->
 		<style>
@@ -235,7 +208,7 @@ $mysqli->close();
          				<td><?php echo $rows['E-mail ID'];?></td>
          				<td>₹ <?php echo $rows['Balance'];?> /-</td>
          				<td class="transfer">
-							<a href="./customers/exam.php">
+							<a href="./exam.php?id=<?php echo $rows['Identity No'];?>">
           						<button class="customer-report" type="button">
             						Transfer
           						</button>
