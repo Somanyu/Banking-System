@@ -15,6 +15,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .heading {
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -84,6 +88,10 @@ p {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border: none;
+}
+
+.customer-report:hover {
+  cursor: pointer;
 }
 
 .customer-report:active {
