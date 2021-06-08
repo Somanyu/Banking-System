@@ -9,61 +9,51 @@ $result = $mysqli->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Bank of America | Customer</title>
-		<link rel="stylesheet" href="./assets/customer.css">
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Bank of America | Customers</title>
+    <link rel="stylesheet" href="./assets/customer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,800">
+</head>
 
-	<body>
-		<h2 class="customer-heading">Customer Transaction &#129534</h2>
-		<!-- <div class="report-button">
-        	<a href="#">
-          		<button class="customer-report" type="button">
-            		View Customer Report
-          		</button>
-        	</a>
-        	<a href="#">
-          		<button class="customer-report" type="button">
-            		View Customer Report
-          		</button>
-        	</a>
-      	</div> -->
-		<div class="table-wrapper">
-			<table class="fl-table">
-				<thead>
-					<tr>
-						<th>Identity No</th>
-						<th>Name</th>
-						<th>E-mail ID</th>
-						<th>Balance</th>
-						<th>Info</th>
-					</tr>
-				</thead>
+<body>
+    <div style="margin-top: 26px;">
+        <h1 class="text-center justify-content-lg-center">Customer Transaction</h1>
+    </div>
+    <div class="div-two">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="padding-left: 21px;text-align: left;">Identity No</th>
+                        <th style="text-align: left;">Full Name</th>
+                        <th style="width: 325.2px;text-align: left;">E-mail ID</th>
+                        <th style="text-align: left;">Balance</th>
+                        <th>Info</th>
+                    </tr>
+                </thead>
 				<?php
          			while($rows=$result->fetch_assoc())
          			{
-     			?>
-				<tbody>
-			    	<tr class="data-row">
-        				<td><?php echo $rows['id'];?></td>
-         				<td><?php echo $rows['full_name'];?></td>
-         				<td><?php echo $rows['email_id'];?></td>
-         				<td>₹ <?php echo $rows['balance'];?> /-</td>
-         				<td class="transfer">
-							<a href="./transfer.php?id=<?php echo $rows['id'];?>">
-          						<button class="customer-transfer" type="button">
-            						Transfer
-          						</button>
-        					</a>
-						</td>
-     				</tr>
-				</tbody>
+     			?>                
+                <tbody>
+                    <tr>
+                        <td style="padding-left: 21px;text-align: left;"><?php echo $rows['id'];?></td>
+                        <td style="text-align: left;"><?php echo $rows['full_name'];?></td>
+                        <td style="text-align: left;"><?php echo $rows['email_id'];?></td>
+                        <td style="text-align: left;">₹ <?php echo $rows['balance'];?> /-</td>
+                        <td><a class="btn" role="button" href="./transfer.php?id=<?php echo $rows['id'];?>" style="border-style: none;padding-top: 1px;padding-bottom: 1px;background: #c84f4b;color: #fff;border-radius: 0px;">Transfer</a></td>
+                    </tr>
+                </tbody>
 				<?php
 				 }
-				?>
-			</table>
-		</div>
-	</body>
+				?>                
+            </table>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
 </html>
