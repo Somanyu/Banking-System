@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2021 at 05:42 AM
+-- Generation Time: Jun 09, 2021 at 07:18 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -39,16 +39,30 @@ CREATE TABLE `customer_transc` (
 --
 
 INSERT INTO `customer_transc` (`id`, `full_name`, `email_id`, `balance`) VALUES
-(101, 'Somanyu Samal', 'somanyu.samal@gmail.com', 50000),
-(102, 'Arjun Wagle', 'arjun.wagle@gmail.com', 36000),
-(103, 'Mohini Raj', 'mohini.raj@gmail.com', 44000),
-(104, 'Krishna Sachin', 'krishna.sachin@gmail.com', 25000),
+(101, 'Somanyu Samal', 'somanyu.samal@gmail.com', 60000),
+(102, 'Arjun Wagle', 'arjun.wagle@gmail.com', 30992),
+(103, 'Mohini Raj', 'mohini.raj@gmail.com', 44534),
+(104, 'Krishna Sachin', 'krishna.sachin@gmail.com', 19637),
 (105, 'Rohan Mishra', 'rohan.mishra@gmail.com', 30000),
 (106, 'Gunjan Mehera', 'gunjan.mehra@gmail.com', 44000),
-(107, 'Virat Singh', 'virat.singh@gmail.com', 27000),
-(108, 'Riya Gada', 'riya.gada@gmail.com', 48000),
-(109, 'Sohan Rajendra', 'rohan.rajendra@gmail.com', 32000),
-(110, 'Priyanka Khandelal', 'priyanka.khandelal@gmail.com', 34400);
+(107, 'Virat Singh', 'virat.singh@gmail.com', 26000),
+(108, 'Riya Gada', 'riya.gada@gmail.com', 46003),
+(109, 'Sohan Rajendra', 'rohan.rajendra@gmail.com', 34388),
+(110, 'Priyanka Khandelal', 'priyanka.khandelal@gmail.com', 34000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `history_transc`
+--
+
+CREATE TABLE `history_transc` (
+  `serial_no` int(11) NOT NULL,
+  `sender` text NOT NULL,
+  `receiver` text NOT NULL,
+  `balance` int(11) NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -59,6 +73,22 @@ INSERT INTO `customer_transc` (`id`, `full_name`, `email_id`, `balance`) VALUES
 --
 ALTER TABLE `customer_transc`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `history_transc`
+--
+ALTER TABLE `history_transc`
+  ADD PRIMARY KEY (`serial_no`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `history_transc`
+--
+ALTER TABLE `history_transc`
+  MODIFY `serial_no` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
