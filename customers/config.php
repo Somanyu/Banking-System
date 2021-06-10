@@ -2,11 +2,11 @@
 <?php
 
 // Username and password(empty)
-$user = 'root';
-$password = '';
+$user = 'id17017226_root';
+$password = 'G<xj!(I0g1$3RQ~0';
 
 // Database name is customers
-$database = 'customers';
+$database = 'id17017226_customers';
 
 $servername='localhost';
 $mysqli = new mysqli($servername, $user, $password, $database);
